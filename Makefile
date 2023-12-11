@@ -1,11 +1,14 @@
 image=cerit.io/ljocha/notebook-gmx
-tag=13
+tag=15
 
 push: build
 	docker push ${image}:${tag}
 
 build:
 	docker build -t ${image}:${tag} .
+
+force:
+	docker build --no-cache -t ${image}:${tag} .
 
 bash:
 	docker run --rm -v ${PWD}:/work -w /work -u $(shell id -u) -ti ${image}:${tag} bash

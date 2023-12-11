@@ -29,6 +29,6 @@ RUN ldconfig
 
 USER ${NB_USER}
 
-RUN cd /tmp && git clone --single-branch -b k8s https://github.com/ljocha/GromacsWrapper.git && pip install GromacsWrapper && rm -rf GromacsWrapper
+RUN cd /tmp && git clone --single-branch -b k8s https://github.com/ljocha/GromacsWrapper.git && pip install ./GromacsWrapper && rm -rf GromacsWrapper
 
 
