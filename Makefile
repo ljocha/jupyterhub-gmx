@@ -1,5 +1,5 @@
 image=cerit.io/ljocha/notebook-gmx
-tag=17
+tag=18
 
 push: build
 	docker push ${image}:${tag}
